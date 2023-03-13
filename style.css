@@ -1,0 +1,178 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@400;700&display=swap');
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+html,body{
+	height: 100%;
+    background-color: rgb(0, 0, 0);
+}
+
+.menudenavegacao{
+    height: 65px;
+    width: 100%;
+    background-color: rgb(0, 0, 0);
+    position: fixed;
+    z-index: 10000;
+}
+
+.logomenudenavegacao{
+    transform: translate(-50%,-50%);
+    position: relative;
+    top: 50%;
+    left: 50%;
+    width: 200px;
+}
+
+.quemsomos{
+    position: relative;
+    top: 500px;
+    width: 88%;
+}
+
+.quemsomos>h1{
+    font-size: 25px;
+    color: rgb(255, 0, 0);
+    font-family: 'Secular One', sans-serif;
+    font-weight: 100;
+}
+
+.quemsomos>p{
+    font-size: 12px;
+    color: rgb(255, 255, 255);
+    font-family: 'Secular One', sans-serif;
+    font-weight: 100;
+    margin-top: 7px;
+    line-height: 15px;
+}
+
+.backgroundeffect{
+    height: 200px;
+    width: 200px;
+    border-radius: 100%;
+    border: 10px solid rgb(255, 255, 255);
+    position: absolute;
+    left: 85px;
+    top: 200px;  
+}
+
+.backgroundeffect::after{
+    content: "";
+    position: relative;
+    height: 120px;
+    width: 120px;
+    border-radius: 100%;
+    border: 10px solid rgb(255, 255, 255);
+    position: absolute;
+    right: 20px;
+    top: 20px;
+}
+
+.backgroundeffect::before{
+    content: "";
+    position: relative;
+    height: 50px;
+    width: 50px;
+    border-radius: 100%;
+    border: 10px solid rgb(255, 255, 255);
+    position: absolute;
+    right: 55px;
+    top: 55px;
+}
+
+.backgroundeffect>img{
+    width: 275px;
+    position: relative;
+    top: -75px;
+    right: 47px;
+    animation: teste 10s infinite linear;
+    z-index: 1;
+    border-radius: 50%;
+}
+
+@keyframes teste {
+
+    0% { rotate: 0deg;  background-color: rgba(255, 0, 0, 0.1);}
+    25% { rotate: 90deg; opacity: 90%; background-color: rgba(255, 0, 0, 0.03);}
+    50% { rotate: 180deg; opacity: 100%; background-color: rgba(255, 0, 0, 0.09);}
+    75% { rotate: 270deg; opacity: 90%; background-color: rgba(255, 0, 0, 0.12);}
+    100% { rotate: 360deg; opacity: 100%; background-color: rgba(255, 0, 0, 0.1);}
+}
+
+
+.botaosobreabrir{
+    height: 100px;
+    width: 20px;
+    background-color: red;
+    position: absolute;
+    top: 500px;
+}
+
+.botaosobrefechar{
+    height: 100px;
+    width: 20px;
+    background-color: red;
+    position: absolute;
+    top: 500px;
+    right: 20px;
+    display: none;
+}
+
+.sobresection>.quemsomos{
+    display: none;
+}
+
+.sobresection.active>.quemsomos{
+    width: 80;
+    display: block;
+}
+
+.sobresection.active>.botaosobrefechar{
+    display: block;
+}
+
+.sobresection.active>.botaosobreabrir{
+    display: none;
+}
+
+.clickhere{
+    height: 50px;
+    width: 200px;
+    background-color: rgb(109, 0, 0);
+    position: relative;
+    top: 600px;
+    transform: translate(-50%,-50%);
+    left: 50%;
+    border-radius: 20px;
+    color: white;
+    font-size: 16px;
+
+}
+
+.peaky>img{
+    width: 300px;
+    position: relative;
+    top: 260px;
+    transform: translate(-50%,-50%);
+    left: 50%;
+    border-radius: 25px;
+    box-shadow: 2px 2px 10px 10px rgba(150, 0, 0, 0.4);
+    z-index: 10;
+    animation: pika 2s infinite linear;
+    display: none;
+}
+
+@keyframes pika{
+
+    0% {top: 260px;}
+    25% {top: 270px;}
+    50% {top: 250px;}
+    75% {top: 270px;}
+    100% {top: 260px;}
+}
+
+.peaky.active img{
+    display: block;
+}
