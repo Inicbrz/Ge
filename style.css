@@ -55,7 +55,9 @@ html,body{
     border: 10px solid rgb(255, 255, 255);
     position: absolute;
     left: 85px;
-    top: 200px;  
+    top: 300px;  
+    transform: translate(-50%,-50%);
+    left: 50%;
 }
 
 .backgroundeffect::after{
